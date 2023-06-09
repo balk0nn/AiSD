@@ -25,7 +25,7 @@ std::string InfixCalc::toPostfix(std::string& expression) {
         // Check for a negative sign
         if (c == '-' && (i == 0 || expression[i - 1] == '(')) {
             currentNumber += c;  // Append the negative sign to the current number
-        } else if (std::isdigit(c) || c == '.') {
+        } else if (std::isdigit(c)) {
             currentNumber += c;  // Add digits and decimal point to the current number
         } else {
             if (!currentNumber.empty()) {
